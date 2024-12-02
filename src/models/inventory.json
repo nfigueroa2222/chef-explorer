@@ -1,0 +1,32 @@
+[
+    {
+        "SKU": "001",
+        "name": "Apples",
+        "qty": 30,
+        "price": 1.75
+    },
+    {
+        "SKU": "002",
+        "name": "Oranges",
+        "qty": 20,
+        "price": 1.25
+    },
+    {
+        "SKU": "003",
+        "name": "Bananas",
+        "qty": 25,
+        "price": 0.98
+    },
+    {
+        "SKU": "004",
+        "name": "Tomatoes",
+        "qty": 15,
+        "price": 1.15
+    },
+    {
+        "SKU": "005",
+        "name": "Lettuce",
+        "qty": 18,
+        "price": 2.50
+    }
+]
