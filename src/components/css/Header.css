@@ -6,6 +6,9 @@
 
 /* General Header container styling */
 .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #333;
     padding: 20px; /* Add a border around content box */
 }
@@ -14,41 +17,48 @@
 .header-content {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between logo and heading title */
+    justify-content: space-between; /* Evenly spaces all components */
+    flex-grow: 1; /* Allows the header content to take up available space */
     background-color: #0d7011;
     color: white;
     padding: 20px;
-    text-align: center;
     border-radius: 8px;
 }
 
 /* Logo image styling */
-.logo img{
-    width: 50px;
-    height: 50px;
+.logo img {
+    width: 90px;
+    height: auto;
     object-fit: contain; /* prevent image distortion due to resizing */
+}
+
+/* Logo container styling */
+.logo {
+    flex-shrink: 0; /* Do not shrink the image container*/
 }
 
 /* Store name title styling */
 .site-name {
-    font-size: 2rem;
+    font-size: 35px;
     font-weight: bold;
     letter-spacing: 2px;
+    padding-left: 10px; /* Space from the logo */
 }
 
-/* Navigation Styling */
-.header-content nav ul {
-    list-style: none;
+/* Styling for normal page size nav links */
+.nav-links-large {
     display: flex;
+    list-style: none;
     gap: 1rem;
 }
 
-/* Navigation Elements Styling */
-.header-content nav ul li a {
+/* Navigation elements text styling */
+.nav-links-large li a {
     color: white;
-    text-decoration: none; /* Remove Underline */
+    text-decoration: none; /* remove underlines */
     font-weight: bold;
     transition: color 0.2s ease;
+    font-size: 1.2rem;
 }
 
 /* Navigation Elements Hover Styling */
@@ -60,4 +70,68 @@
 .header-content nav ul li a:focus {
     outline: 2px solid red; /* Add a focus outline */
     background-color: rgba(249, 199, 79, 0.2); /* Add a shade over the clicked nav item */
+}
+
+/* Hamburger symbol style */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Nav links container box styling */
+.nav-links-small {
+    display: none; /* Hide initially */
+    flex-direction: column;
+    align-items: center;
+    position: absolute; /* So it does not change the flex header content size */
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+/* Display the hamburger nav links when button is toggled */
+.nav-links-small.active {
+    display: flex;
+}
+
+/* List styling for the hamburger nav links */
+.nav-links-small li {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eae7e7;
+}
+
+/* Styling for the hamburger menu links */
+.nav-links-small li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+    .logo img {
+        width: 5rem;
+    }
+
+    .site-name {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links-large {
+        display: none;
+    }
+
 }
