@@ -13,7 +13,6 @@
 /* Header content and box styling */
 .header-content {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 15px; /* Space between logo and heading title */
     background-color: #0d7011;
@@ -31,8 +30,34 @@
 }
 
 /* Store name title styling */
-.store-name {
+.site-name {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+/* Navigation Styling */
+.header-content nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Navigation Elements Styling */
+.header-content nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove Underline */
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+/* Navigation Elements Hover Styling */
+.header-content nav ul li a:hover {
+    color: red;
+}
+
+/* Navigation Element Styling When Clicked */
+.header-content nav ul li a:focus {
+    outline: 2px solid red; /* Add a focus outline */
+    background-color: rgba(249, 199, 79, 0.2); /* Add a shade over the clicked nav item */
 }

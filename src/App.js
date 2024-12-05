@@ -1,16 +1,15 @@
 import './App.css';
 import React from 'react';
-import Header from './components/scripts/Header';
-import InventoryList from './components/scripts/InventoryList';
-import Footer from './components/scripts/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/pages/Home';
+import Recipes from './components/pages/Recipes';
 
 const App = () => {
   return (
-    <div className="app-container">
-      <Header />
-      <InventoryList />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/recipes" element={<Recipes />} />
+    </Routes>
   );
 };
 
