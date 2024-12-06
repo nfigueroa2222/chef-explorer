@@ -1,70 +1,62 @@
-/* Container for each preview item */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styling */
 .preview-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Evenly space out items on the container */
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 1px solid #ddd; /* soft grey color */
+    border-radius: 8px;
     padding: 20px;
-    width: 250px; /* Set a fixed width for consistent card sizing */
-    height: 400px; /* Set a fixed height for all cards */
+    width: 250px; /* Fixed width for consistent card sizing */
+    height: 400px; /* Fixed height for all cards */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden; /* Ensure content doesn't overflow */
-  }
-  
-  /* Hover effect for interactivity */
-  .preview-item:hover {
-    transform: translateY(-5px);
+    overflow: hidden; /* Ensure content doesn't overflow, although it really shouldn't */
+}
+
+/* Hover effect Styling */
+.preview-item:hover {
+    transform: translateY(-5px) scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-/* Recipe image styles */
+}
+
+/* Container styling for the recipe image */
 .recipe-image {
     width: 100%;
-    height: 180px; /* Fixed height for image */
+    height: 200px; /* Fixed height for image container */
+    object-fit: cover; /* Ensures the image container covers the space without distortion */
+}
+
+/* Recipe image styling */
+.recipe-image img {
+    width: 100%;
+    height: 200px; /* Fixed height for image */
     object-fit: cover; /* Ensures the image covers the space without distortion */
     border-radius: 8px;
     margin-bottom: 15px;
-  }
-  
-  /* Recipe name styles */
-  .recipe-name {
+}
+
+/* Recipe name styles */
+.recipe-name {
     font-size: 1.5rem;
     color: #333;
     margin: 10px 0;
     font-weight: 600;
     text-align: center;
-  }
-  
-  /* Servings text styles */
-  .recipe-servings {
+}
+
+/* Servings text styles */
+.recipe-servings {
     font-size: 1rem;
     color: #666;
-    margin: 0;
+    font-weight: 500;
     text-align: center;
-  }
-  
-  /* Add spacing and margin for better layout */
-  .preview-item p {
-    margin: 5px 0;
-  }
-  
-  /* Media queries for responsiveness */
-  @media (max-width: 768px) {
-    .preview-item {
-      max-width: 90%;
-      padding: 15px;
-    }
-  
-    .recipe-name {
-      font-size: 1.25rem;
-    }
-  
-    .recipe-servings {
-      font-size: 0.9rem;
-    }
-  }
-  
+    margin: 10px;
+}

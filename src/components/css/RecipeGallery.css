@@ -1,35 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styling */
 .recipe-gallery {
-    position: relative;
+    position: relative; /* Used to center arrow buttons */
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 100%;
-    overflow: hidden;
     min-height: 80vh;
 }
 
-/* Carousel container */
+/* Carousel container styling */
 .carousel {
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto; /* Take up the screen width only */
     scroll-behavior: smooth;
-    gap: 20px;
-    /* Space between items */
+    gap: 20px; /* Space between items */
     padding: 20px;
-    scrollbar-width: none;
-    /* Hide scrollbar for Firefox */
+    scrollbar-width: none; /* Hide scrollbar for Firefox, it is different than the others */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
 }
 
+/* Carousel scrollbar styling */
 .carousel::-webkit-scrollbar {
-    display: none;
-    /* Hide scrollbar for Chrome/Safari */
+    display: none; /* Hide scrollbar for Chrome/Safari */
 }
 
-/* Carousel buttons */
+/* Carousel button styling */
 .carousel-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* move button up a bit to center it */
     background: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
@@ -41,26 +46,53 @@
     z-index: 10;
 }
 
+/* Left button styling */
 .carousel-button.left {
     left: 10px;
 }
 
+/* Right button styling */
 .carousel-button.right {
     right: 10px;
 }
 
+/* Button hover styling */
 .carousel-button:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
-/* Adjust spacing and layout for PreviewItem */
+/* Carousel related preview item styling */
 .preview-item {
-    min-width: 250px;
-    /* Ensure consistent card width */
-    flex-shrink: 0;
-    transition: transform 0.3s;
+    flex-shrink: 0; /* prevent resizing due to being in carousel*/
+    margin: 10px; /* Margin to prevent hover effect overlap */
 }
 
-.preview-item:hover {
-    transform: scale(1.05);
+@media (max-width: 768px) {
+  
+    /* Preview item styling for smaller screens */
+    .carousel .preview-item {
+        scroll-snap-align: center; /* Allows only one PreviewItem to be focused on at a time */
+    }
+
+    /* Recipe image container styling when in the carousel */
+    .carousel .preview-item .recipe-image {
+        width: 100%; /* Image takes full width */
+        height: 200px; /* Maintain aspect ratio */
+    }
+
+    /* Recipe image styling when in the carousel */
+    .carousel .preview-item .recipe-image img{
+        width: 100%; /* Image takes full width */
+        height: 200px; /* Maintain aspect ratio */
+    }
+    
+    /* Recipe name text styling */
+    .carousel .preview-item .recipe-name {
+        font-size: 1.25rem; /* Slightly smaller text */
+    }
+    
+    /* Recipe servings text styling */
+    .carousel .preview-item .recipe-servings {
+        font-size: 1rem;
+    }
 }

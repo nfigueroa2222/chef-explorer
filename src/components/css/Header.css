@@ -31,6 +31,7 @@
     width: 90px;
     height: auto;
     object-fit: contain; /* prevent image distortion due to resizing */
+    border-radius: 8px;
 }
 
 /* Logo container styling */
@@ -93,6 +94,7 @@
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    z-index: 9000;
 }
 
 /* Display the hamburger nav links when button is toggled */
