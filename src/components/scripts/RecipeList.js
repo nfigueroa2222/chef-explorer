@@ -24,11 +24,9 @@ class RecipeList extends Component {
                             <PreviewItem
                                 key={previewItem.id}
                                 id={previewItem.id}
-                                date={previewItem.date}
                                 image={previewItem.image}
                                 name={previewItem.name}
                                 servings={previewItem.servings}
-                                price={previewItem.price}
                             />
                         ))}
                     </div>

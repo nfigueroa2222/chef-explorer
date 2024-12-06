@@ -4,69 +4,109 @@
         "date": "2024-08-10",
         "image": "/images/beef-roast.jpg",
         "name": "Beef Roast",
-        "servings": 2
+        "servings": 2,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     },
     {
         "id": 2,
         "date": "2024-11-02",
         "image": "/images/buns.jpg",
         "name": "Honey Buns",
-        "servings": 4
+        "servings": 4,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     },
     {
         "id": 3,
         "date": "2024-10-26",
         "image": "/images/butternut-squash-oyster.jpg",
         "name": "Butternut Squash Soup with Oyster Mushrooms",
-        "servings": 2
+        "servings": 2,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     },
     {
         "id": 4,
         "date": "2024-11-09",
         "image": "/images/chicken-soup.jpg",
         "name": "Chicken Noodle Soup",
-        "servings": 3
+        "servings": 3,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     },
     {
         "id": 5,
         "date": "2023-10-22",
         "image": "/images/french-toast.jpg",
         "name": "French Toast",
-        "servings": 2
+        "servings": 2,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     },
     {
         "id": 6,
         "date": "2024-11-20",
         "image": "/images/salmon-quinoa.jpg",
         "name": "Salmon with Quinoa and Potatoes",
-        "servings": 2
+        "servings": 2,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     },
     {
         "id": 7,
         "date": "2024-12-03",
         "image": "/images/salmon-rice.jpg",
         "name": "Salmon with Rice",
-        "servings": 2
+        "servings": 2,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     },
     {
         "id": 8,
         "date": "2024-11-12",
         "image": "/images/shrimp-cake-pasta.jpg",
         "name": "Pasta with Shrimp cake",
-        "servings": 1
+        "servings": 1,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     },
     {
         "id": 9,
         "date": "2024-11-03",
         "image": "/images/spaghetti-squash.jpg",
         "name": "Spaghetti Squash with Pancetta Tomato Sauce",
-        "servings": 2
+        "servings": 2,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     },
     {
         "id": 10,
         "date": "2024-15-11",
         "image": "/images/steak-carrot.jpg",
         "name": "NY Strip with Carrot Puree",
-        "servings": 2
+        "servings": 2,
+        "directions": "Default directions",
+        "ingredients": [
+            "ingredient 1"
+        ]
     }
 ]
