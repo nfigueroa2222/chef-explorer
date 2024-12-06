@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import '../css/PreviewItem.css';
 
-const PreviewItem = ({ id, image, name, servings }) => {
+const PreviewItem = ({ id, date, image, name, servings }) => {
 
     return (
         <div className="preview-item">
@@ -18,6 +18,7 @@ const PreviewItem = ({ id, image, name, servings }) => {
 // Use PropTypes for type-checking
 PreviewItem.propTypes = {
     id: PropTypes.number.isRequired,
+    date: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     servings: PropTypes.number.isRequired
