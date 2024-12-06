@@ -6,6 +6,11 @@ import '../css/RecipeGallery.css';
 const RecipeGallery = () => {
     const carouselRef = useRef(null); /* Creates a reference to the carousel element to manipulate it aka scroll */
 
+    // Sort the recipes by date (most recent first) and take the 8 most recent
+    const sortedRecipes = [...recipes] // Shallow copy using spread, so object references will remain the same but new array
+        .sort((a, b) => new Date(b.date) - new Date(a.date))  // Sort by date in descending order
+        .slice(0, 8); // Take the 8 most recent recipes
+
     const scrollLeft = () => {
         carouselRef.current.scrollBy({
             left: -260, // Adjust based on the card width and padding
@@ -20,12 +25,13 @@ const RecipeGallery = () => {
 
     return (
         <div className="recipe-gallery">
+            <h2 className="new-recipe-header">Most Recent Recipes</h2>
             <button className="carousel-button left" onClick={scrollLeft}>
                 &#9668; { /* unicode for left arrow */ }
             </button>
             <div className="carousel" ref={carouselRef}>
                 { /* use the recipes.json file to populate */ }
-                {recipes.map((previewItem) => (
+                {sortedRecipes.map((previewItem) => (
                     <PreviewItem
                         key={previewItem.id}
                         id={previewItem.id}
