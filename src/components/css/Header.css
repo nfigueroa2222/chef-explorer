@@ -11,7 +11,6 @@
     justify-content: space-between;
     background-color: #333;
     padding: 20px; /* Add a border around content box */
-    font-family: Apple Chancery, cursive; /* Lets get fancy */
 }
 
 /* Header content and box styling */
@@ -20,7 +19,7 @@
     align-items: center;
     justify-content: space-between; /* Evenly spaces all components */
     flex-grow: 1; /* Allows the header content to take up available space */
-    background-color: #0d7011;
+    background-color: #0a560d;
     color: white;
     padding: 20px;
     border-radius: 8px;

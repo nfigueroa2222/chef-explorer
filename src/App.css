@@ -10,6 +10,7 @@
   flex-direction: column; /* Stack header, body, and footer vertically */
   height: 100vh; /* Full height of the viewport */
   background-color: #f4f4f9;
+  font-family: Apple Chancery, cursive; /* Lets get fancy */
 }
 
 

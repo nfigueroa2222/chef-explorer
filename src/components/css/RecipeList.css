@@ -4,23 +4,23 @@
     box-sizing: border-box;
 }
 
-/* General inventory list styling */
-main .inventory {
-    padding: 40px; /* Some extra padding */
-    background-color: white;
+/* All Recipes section container styling */
+main .all-recipes {
+    padding: 30px; /* Some extra padding */
+    background-image: linear-gradient(#01a07b,#9c9b9bcc);
     min-height: 90vh; /* Ensure that the footer is at the bottom */
 }
 
 /* Grid container for displaying items */
-main .inventory-grid {
+main .all-recipes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create columns with a min-width of 250px */
     gap: 20px; /* Add spacing between the grid items */
 }
 
 /* Styling for the inventory title text */
-main .inventory-heading {
-    font-size: 2rem;
+main .all-recipes-heading {
+    font-size: 3.25rem;
     font-weight: bold;
     color: black;
     text-align: center;

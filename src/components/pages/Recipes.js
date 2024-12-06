@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../scripts/Header';
-import InventoryList from '../scripts/InventoryList';
+import RecipeList from '../scripts/RecipeList';
 import Footer from '../scripts/Footer';
 
 const Recipes = () => {
     return (
       <div>
         <Header />
-        <InventoryList />
+        <RecipeList />
         <Footer />
       </div>
     );

@@ -6,7 +6,7 @@ import Recipes from './components/pages/Recipes';
 
 const App = () => {
   return (
-    <div>
+    <div className='app-container'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipes" element={<Recipes />} />

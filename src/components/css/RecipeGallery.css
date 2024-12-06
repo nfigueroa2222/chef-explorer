@@ -12,6 +12,7 @@
     justify-content: center;
     max-width: 100%;
     min-height: 80vh;
+    background-image: linear-gradient(#01a07b,#9c9b9bcc);
 }
 
 /* Carousel container styling */

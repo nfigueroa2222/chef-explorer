@@ -5,7 +5,7 @@ import Footer from '../scripts/Footer';
 
 const Home = () => {
   return (
-    <div className="app-container">
+    <div>
       <Header />
       <RecipeGallery />
       <Footer />
