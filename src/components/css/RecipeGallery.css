@@ -1,0 +1,66 @@
+.recipe-gallery {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 80vh;
+}
+
+/* Carousel container */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    /* Space between items */
+    padding: 20px;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome/Safari */
+}
+
+/* Carousel buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Adjust spacing and layout for PreviewItem */
+.preview-item {
+    min-width: 250px;
+    /* Ensure consistent card width */
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.preview-item:hover {
+    transform: scale(1.05);
+}

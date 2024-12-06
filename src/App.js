@@ -6,10 +6,12 @@ import Recipes from './components/pages/Recipes';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/recipes" element={<Recipes />} />
-    </Routes>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipes" element={<Recipes />} />
+      </Routes>
+    </div>
   );
 };
 

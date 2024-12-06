@@ -11,6 +11,7 @@
     justify-content: space-between;
     background-color: #333;
     padding: 20px; /* Add a border around content box */
+    font-family: Apple Chancery, cursive; /* Lets get fancy */
 }
 
 /* Header content and box styling */
@@ -37,7 +38,7 @@
     flex-shrink: 0; /* Do not shrink the image container*/
 }
 
-/* Store name title styling */
+/* Site name title styling */
 .site-name {
     font-size: 35px;
     font-weight: bold;
