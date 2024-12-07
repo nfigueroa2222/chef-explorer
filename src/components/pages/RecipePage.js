@@ -1,29 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/RecipePage.css';
+import Header from '../scripts/Header';
+import Footer from '../scripts/Footer';
 
 const RecipePage = ({ name, date, servings, directions, ingredients, image }) => {
     return (
         <div className="recipe-page">
-            <button className="back-button" onClick={() => window.history.back()}>Back to Recipes</button>
-            <h1 className="recipe-title">{name}</h1>
-            <p className="recipe-date"><strong>Date Added:</strong> {date}</p>
-            <div className="recipe-details">
-                <div className="recipe-image">
-                    <img src={image} alt={name} />
+            <Header />
+            <div className='recipe-container'>
+                <div className="recipe-details">
+                    <div className="recipe-header">
+                        <h1 className="recipe-title">{name}</h1>
+                        <p className="recipe-date">
+                            Date Added: {date}
+                        </p>
+                    </div>
+                    <div className="recipe-info">
+                        <p>
+                            <strong>Servings:</strong> {servings}
+                        </p>
+                        <p>Ingredients:</p>
+                        <ul className="ingredients-list">
+                            {ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                            ))}
+                        </ul>
+                        <p>Directions:</p>
+                        <p className="directions-text">{directions}</p>
+                    </div>
                 </div>
-                <div className="recipe-info">
-                    <p><strong>Servings:</strong> {servings}</p>
-                    <p><strong>Ingredients:</strong></p>
-                    <ul>
-                        {ingredients.map((ingredient, index) => (
-                            <li key={index}>{ingredient}</li>
-                        ))}
-                    </ul>
-                    <p><strong>Directions:</strong></p>
-                    <p>{directions}</p>
+                <div className="recipe-image">
+                    <img src={image} alt={`Image of ${name}`} />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
