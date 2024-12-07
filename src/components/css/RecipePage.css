@@ -5,97 +5,147 @@
     box-sizing: border-box;
 }
 
+/* Recipe page container styling */
 .recipe-container {
     display: flex;
+    background-image: linear-gradient(#01a07b,#9c9b9bcc);
+    padding: 20px;
 }
 
-/* Recipe Header Section */
-.recipe-header {
+/* Recipe Image Styling */
+.recipe-container .recipe-image {
+    flex: 1; /* 1 third of the container */
+    position: sticky; /* Allows it to remain on screen as you scroll down */
+    top: 20px; /* Defines the position to stick the image to */
+    padding: 20px 0px 0px 20px;
+    align-self: flex-start;
+    height: auto;
+}
+
+/* Actual image styling */
+.recipe-container .recipe-image img {
+    width: 100%;
+    height: auto; /* Fixed height for image */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Recipe details styling */
+.recipe-details {
+    display: flex;
+    flex: 2; /* 2 times bigger than other flex elements */
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto; /* Add space around details box */
+    max-width: 1200px; /* Don't make it to big or text looks lost */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 80vh; /* Ensure that the footer is at the bottom */
+}
+
+/* Recipe info styling */
+.recipe-info {
     display: flex;
     flex-direction: column;
+    flex: 1; /* Fill in rest of space */
+    padding: 10px 20px;
+}
+
+/* Recipe header section styling */
+.recipe-header {
     margin-bottom: 20px;
 }
 
+/* Recipe title styling */
 .recipe-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    color: #333;
+    color: black;
 }
 
+/* Recipe date styling */
 .recipe-date {
     font-size: 1rem;
     color: #777;
 }
 
-/* Recipe Details Section */
-.recipe-details {
-    display: flex;
-    flex: 2;
-    flex-direction: column;
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: 80vh; /* Ensure that the footer is at the bottom */
-}
-
-/* Recipe Image Styling */
-.recipe-page .recipe-image {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.recipe-page .recipe-image img {
-    width: 100%;
-    height: auto; /* Fixed height for image */
-    object-fit: cover; /* Ensures the image covers the space without distortion */
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-/* Recipe Info Section */
-.recipe-info {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
+/* Recipe info normal text styling */
 .recipe-info p {
     margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: #444;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: black;
 }
 
+/* Recipe info strong text styling */
 .recipe-info strong {
     font-weight: 700;
-    color: #222;
+    font-size: 1.5rem;
+    color: black;
 }
 
-/* Ingredients List */
+/* Section header styling */
+.recipe-info .section-header {
+    font-size: 2rem;
+    color: black;
+}
+
+/* Ingredients list styling */
 .ingredients-list {
     margin: 10px 0 20px;
-    padding-left: 20px;
-    list-style: disc;
+    padding-left: 50px;
 }
 
+/* Ingedients list styling */
 .ingredients-list li {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-bottom: 8px;
-    color: #555;
+    color: black;
 }
 
-/* Directions Text */
-.directions-text {
-    font-size: 1.1rem;
-    color: #444;
-    line-height: 1.8;
-    text-align: justify;
+/* Directions text styling */
+.recipe-info .directions-text {
+    font-size: 1.25rem;
+    padding-left: 50px;
+    color: black;
+}
+
+@media (max-width: 768px) {
+
+    /* Styling for the recipe page container */
+    .recipe-container {
+        /* Use grid layout instead of flex so the image can be placed on top to ignore the HTML setup
+        this allows the HTML setup to be used to make the image be on the right side when using flex */
+        display: grid; 
+        grid-template-columns: 1fr; /* One column for smaller screens */
+        justify-items: center; /* Center the content horizontally */
+    }
+
+    /* Styling for the recipe-image container */
+    .recipe-container .recipe-image {
+        grid-row: 1; /* Make the image appear at the top */
+        grid-column: 1; /* Take full width in grid layout */
+        width: auto; /* Image spans full width */
+        max-height: 350px;
+        position: static; /* Remove sticky behavior */
+        top: 0;
+        padding: 0px;
+    }
+
+    /* Styling for the image on smaller screens */
+    .recipe-container .recipe-image img {
+        width: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    /* Styling for the recipe-details container */
+    .recipe-container .recipe-details {
+        grid-row: 2; /* Make the text appear below the image */
+        grid-column: 1; /* Take full width in grid layout */
+        width: 100%; /* Ensure full width for text */
+    }
 }

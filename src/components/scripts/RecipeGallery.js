@@ -24,27 +24,29 @@ const RecipeGallery = () => {
     };
 
     return (
-        <div className="recipe-gallery">
-            <h2 className="new-recipe-header">Most Recent Recipes</h2>
-            <button className="carousel-button left" onClick={scrollLeft}>
-                &#9668; { /* unicode for left arrow */ }
-            </button>
-            <div className="carousel" ref={carouselRef}>
-                { /* use the recipes.json file to populate */ }
-                {sortedRecipes.map((previewItem) => (
-                    <PreviewItem
-                        key={previewItem.id}
-                        id={previewItem.id}
-                        image={previewItem.image}
-                        name={previewItem.name}
-                        servings={previewItem.servings}
-                    />
-                ))}
-            </div>
-            <button className="carousel-button right" onClick={scrollRight}>
-                &#9658; { /* unicode for right arrow */ }
-            </button>
-        </div>
+        <main>
+            <section className="recipe-gallery">
+                <h2 className="new-recipe-header">Most Recent Recipes</h2>
+                <button className="carousel-button left" onClick={scrollLeft}>
+                    &#9668; { /* unicode for left arrow */ }
+                </button>
+                <div className="carousel" ref={carouselRef}>
+                    { /* use the recipes.json file to populate */ }
+                    {sortedRecipes.map((previewItem) => (
+                        <PreviewItem
+                            key={previewItem.id}
+                            id={previewItem.id}
+                            image={previewItem.image}
+                            name={previewItem.name}
+                            servings={previewItem.servings}
+                        />
+                    ))}
+                </div>
+                <button className="carousel-button right" onClick={scrollRight}>
+                    &#9658; { /* unicode for right arrow */ }
+                </button>
+            </section>
+        </main>
     );
 };
 
