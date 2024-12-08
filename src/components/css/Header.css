@@ -44,6 +44,7 @@
     font-weight: bold;
     letter-spacing: 2px;
     padding-left: 10px; /* Space from the logo */
+    font-family: Apple Chancery, cursive;
 }
 
 /* Styling for normal page size nav links */

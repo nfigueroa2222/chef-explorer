@@ -18,13 +18,14 @@ main .all-recipes-grid {
     gap: 20px; /* Add spacing between the grid items */
 }
 
-/* Styling for the inventory title text */
+/* Styling for the all recipe title text */
 main .all-recipes-heading {
     font-size: 3.25rem;
     font-weight: bold;
     color: black;
     text-align: center;
     margin-bottom: 20px;
+    font-family: Apple Chancery, cursive;
 }
 
 @media (max-width: 768px) {
