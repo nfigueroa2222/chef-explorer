@@ -65,6 +65,22 @@ const AccountSetup = () => {
         return formIsValid;
     };
 
+    // Display the popup with a message
+    const showPopup = (message) => {
+        setPopupMessage(message);
+        setPopupVisible(true);
+    };
+
+    // Hide the popup
+    const closePopup = () => {
+        //Refresh the page on successful login and logout to re render the header, this needs to be changed for performance in the future
+        if (popupMessage.includes("Successful")) { // Check if the message is a success message
+            window.location.reload(); // Trigger a page reload
+        }
+        setPopupMessage('');
+        setPopupVisible(false);
+    };
+
     // Set the state of the incoming form data
     const [formData, setFormData] = useState({
         email: '',
@@ -81,10 +97,11 @@ const AccountSetup = () => {
         lastName: '',
     });
 
-    // Set the state of the responseMessage
-    const [responseMessage, setResponseMessage] = useState('');
     // Set the state of the user in the browser cache, finally got to use my discussion post topic 
     const user = localStorage.getItem('user');
+    // State for popup visibility and message
+    const [popupMessage, setPopupMessage] = useState('');
+    const [isPopupVisible, setPopupVisible] = useState(false);
 
     // Very important, otherwise react will re render and changes will be lost. So store them in a state
     const handleChange = (e) => {
@@ -116,13 +133,27 @@ const AccountSetup = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                alert(`Registration Successful: ${data.message}`);
+                showPopup(`${data.message}`);
+                // Clear form fields after successful registration
+                setFormData({
+                    email: '',
+                    password: '',
+                    firstName: '',
+                    lastName: '',
+                });
+                // Clear any errors after successful registration
+                setErrors({
+                    email: '',
+                    password: '',
+                    firstName: '',
+                    lastName: '',
+                });
             } else {
                 const errorData = await response.json();
-                alert(`Error: ${errorData.message}`);
+                showPopup(`${errorData.message}`);
             }
         } catch (error) {
-            alert(`Error: ${error.message}`);
+            showPopup(`Error: ${error.message}`);
         }
     };
 
@@ -151,20 +182,20 @@ const AccountSetup = () => {
             if (response.ok) {
                 const data = await response.json();
                 localStorage.setItem('user', JSON.stringify(data)); // Set the localStorage browser cache with the user data
-                alert(`Login Successful: Welcome ${data.first_name}`);
+                showPopup(`Login Successful: Welcome ${data.first_name}`);
             } else {
                 const errorData = await response.json();
-                alert(`Error: ${errorData.message}`);
+                showPopup(`${errorData.message}`);
             }
         } catch (error) {
-            alert(`Error: ${error.message}`);
+            showPopup(`Error: ${error.message}`);
         }
     };
 
     // Handles the logout if the account is logged in already, logic is handled with HTML 
     const handleLogout = () => {
         localStorage.removeItem('user');
-        setResponseMessage('You have logged out successfully.');
+        showPopup('Logout Successful!');
     };
 
     return (
@@ -222,7 +253,14 @@ const AccountSetup = () => {
                     )}
                 </div>
             </form>
-            <p className="response-message">{responseMessage}</p>
+            {isPopupVisible && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <p>{popupMessage}</p>
+                        <button onClick={closePopup}>Close</button>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

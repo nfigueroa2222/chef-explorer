@@ -8,12 +8,14 @@
 .account-setup {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-height: 70vh;
 }
 
 /* Account setup header styling */
@@ -94,13 +96,61 @@ form span {
     background-color: #28a745;
 }
 
+/* Disable button styling to prevent multiple clicks*/
+.button-container button:disabled {
+    background-color: grey;
+    color: white;
+    cursor: not-allowed; /* Show the "not allowed" cursor */
+    opacity: 0.6;
+}
 
-/* Response message styling */
-.response-message {
-    margin-top: 15px;
+/* Popup message styling */
+.popup {
+    position: fixed;
+    /* top, left, width, and height are for centering */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+/* Popup container styling */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%; /* Use available space */
+}
+
+/* Popup text styling */
+.popup-content p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: black;
+}
+
+/* Popup button styling */
+.popup-content button {
+    padding: 10px 20px;
     font-size: 14px;
-    color: #28a745;
+    background-color: #0a560d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* popup button hover styling */
+.popup-content button:hover {
+    background-color: #28a745;
 }
 
 @media (max-width: 600px) {
