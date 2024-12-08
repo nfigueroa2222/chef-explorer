@@ -2,7 +2,7 @@
     {
         "id": 1,
         "date": "2024-08-10",
-        "image": "/images/beef-roast.jpg",
+        "image": "beef-roast.jpg",
         "name": "Beef Roast",
         "servings": 2,
         "directions": "Default directions",
