@@ -26,3 +26,4 @@ To deploy to gh-pages
     - Use HashRouter instead of BrowserRouter since BrowserRouter is not supported 
     - npm run deploy -> Launches the script, to push to the gh-pages deployment branch
     - To set up deployment branch -> Launch the script, npm run predeploy
+    - The deployment script does not load images in the images folder, needs to be in same directory as index.html

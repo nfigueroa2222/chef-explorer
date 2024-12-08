@@ -38,7 +38,7 @@ const Header = () => {
         <header>
             <div className="header-container">
                 <div className='logo'> 
-                    <img src="/chef-logo.png" alt="Chef Explorer Logo"/>
+                    <img src="chef-logo.png" alt="Chef Explorer Logo"/>
                 </div>
                 <div className="header-content">
                     <h1 className="site-name">Chef Explorer</h1>
