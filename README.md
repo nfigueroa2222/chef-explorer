@@ -21,3 +21,8 @@ npm install express to setup a server
 npm install cors -> this is needed as middleware to allow the react front end app to use the express back end
 
 npm install body-parser
+
+To deploy to gh-pages
+    - Use HashRouter instead of BrowserRouter since BrowserRouter is not supported 
+    - npm run deploy -> Launches the script, to push to the gh-pages deployment branch
+    - To set up deployment branch -> Launch the script, npm run predeploy

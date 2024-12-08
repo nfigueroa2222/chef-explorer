@@ -13,7 +13,7 @@
     {
         "id": 2,
         "date": "2024-11-02",
-        "image": "/images/buns.jpg",
+        "image": "buns.jpg",
         "name": "Honey Buns",
         "servings": 4,
         "directions": "Default directions",
@@ -24,7 +24,7 @@
     {
         "id": 3,
         "date": "2024-10-26",
-        "image": "/images/butternut-squash-oyster.jpg",
+        "image": "butternut-squash-oyster.jpg",
         "name": "Butternut Squash Soup with Oyster Mushrooms",
         "servings": 2,
         "directions": "Default directions",
@@ -35,7 +35,7 @@
     {
         "id": 4,
         "date": "2024-11-09",
-        "image": "/images/chicken-soup.jpg",
+        "image": "chicken-soup.jpg",
         "name": "Chicken Noodle Soup",
         "servings": 3,
         "directions": "Default directions",
@@ -46,7 +46,7 @@
     {
         "id": 5,
         "date": "2023-10-22",
-        "image": "/images/french-toast.jpg",
+        "image": "french-toast.jpg",
         "name": "French Toast",
         "servings": 2,
         "directions": "Default directions",
@@ -57,7 +57,7 @@
     {
         "id": 6,
         "date": "2024-11-20",
-        "image": "/images/salmon-quinoa.jpg",
+        "image": "salmon-quinoa.jpg",
         "name": "Salmon with Quinoa and Potatoes",
         "servings": 2,
         "directions": "Default directions",
@@ -68,7 +68,7 @@
     {
         "id": 7,
         "date": "2024-12-03",
-        "image": "/images/salmon-rice.jpg",
+        "image": "salmon-rice.jpg",
         "name": "Salmon with Rice",
         "servings": 2,
         "directions": "Default directions",
@@ -79,7 +79,7 @@
     {
         "id": 8,
         "date": "2024-11-12",
-        "image": "/images/shrimp-cake-pasta.jpg",
+        "image": "shrimp-cake-pasta.jpg",
         "name": "Pasta with Shrimp cake",
         "servings": 1,
         "directions": "Default directions",
@@ -90,7 +90,7 @@
     {
         "id": 9,
         "date": "2024-11-03",
-        "image": "/images/spaghetti-squash.jpg",
+        "image": "spaghetti-squash.jpg",
         "name": "Spaghetti Squash with Pancetta Tomato Sauce",
         "servings": 2,
         "directions": "Default directions",
@@ -101,7 +101,7 @@
     {
         "id": 10,
         "date": "2024-15-11",
-        "image": "/images/steak-carrot.jpg",
+        "image": "steak-carrot.jpg",
         "name": "NY Strip with Carrot Puree",
         "servings": 2,
         "directions": "Default directions",
