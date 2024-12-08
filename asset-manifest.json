@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/chef-explorer/static/css/main.1f8e8f28.css",
-    "main.js": "/chef-explorer/static/js/main.d444c8d9.js",
+    "main.js": "/chef-explorer/static/js/main.b0feaf5e.js",
     "static/js/453.cfb7939c.chunk.js": "/chef-explorer/static/js/453.cfb7939c.chunk.js",
     "index.html": "/chef-explorer/index.html",
     "main.1f8e8f28.css.map": "/chef-explorer/static/css/main.1f8e8f28.css.map",
-    "main.d444c8d9.js.map": "/chef-explorer/static/js/main.d444c8d9.js.map",
+    "main.b0feaf5e.js.map": "/chef-explorer/static/js/main.b0feaf5e.js.map",
     "453.cfb7939c.chunk.js.map": "/chef-explorer/static/js/453.cfb7939c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f8e8f28.css",
-    "static/js/main.d444c8d9.js"
+    "static/js/main.b0feaf5e.js"
   ]
 }
