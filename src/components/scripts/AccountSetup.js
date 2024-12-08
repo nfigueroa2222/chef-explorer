@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/AccountSetup.css';
 
 const AccountSetup = () => {
 
@@ -38,7 +39,7 @@ const AccountSetup = () => {
         if (!formData.password) {
             formIsValid = false;
             formErrors.password = 'Password is required';
-        } else if (formData.password < 6) {
+        } else if (formData.password.length < 6) {
             formIsValid = false;
             formErrors.password = 'Password must be at least 6 characters';
         }
@@ -170,7 +171,7 @@ const AccountSetup = () => {
         <section className='account-setup'>
             <h1>Account Setup</h1>
             <form>
-                <div>
+                <section>
                     <label>Email:</label>
                     <input
                         type="email"
@@ -179,8 +180,8 @@ const AccountSetup = () => {
                         onChange={handleChange}
                     />
                     {errors.email && <span>{errors.email}</span>}
-                </div>
-                <div>
+                </section>
+                <section>
                     <label>Password:</label>
                     <input
                         type="password"
@@ -189,8 +190,8 @@ const AccountSetup = () => {
                         onChange={handleChange}
                     />
                     {errors.password && <span>{errors.password}</span>}
-                </div>
-                <div>
+                </section>
+                <section>
                     <label>First Name:</label>
                     <input
                         type="text"
@@ -199,8 +200,8 @@ const AccountSetup = () => {
                         onChange={handleChange}
                     />
                     {errors.firstName && <span>{errors.firstName}</span>}
-                </div>
-                <div>
+                </section>
+                <section>
                     <label>Last Name:</label>
                     <input
                         type="text"
@@ -209,7 +210,7 @@ const AccountSetup = () => {
                         onChange={handleChange}
                     />
                     {errors.lastName && <span>{errors.lastName}</span>}
-                </div>
+                </section>
                 <div className="button-container">
                     <button type="button" onClick={handleRegister}>
                         Register
