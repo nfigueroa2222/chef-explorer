@@ -21,6 +21,7 @@ const AccountSetup = () => {
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
     };
 
+    // Validates the form fields and sets the error state
     const validateForm = () => {
         let formIsValid = true;
         let formErrors = { ...errors };

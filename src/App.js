@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Recipes from './components/pages/Recipes';
 import RecipePage from './components/pages/RecipePage';
@@ -11,7 +11,7 @@ const App = () => {
   
   return (
     <div className='app-container'>
-      <Routes>
+      <HashRouter>
         <Route path="/" element={<Home />} />
         <Route path="/recipes" element={<Recipes />} />
         {recipeData.map((recipe) => (
@@ -19,7 +19,7 @@ const App = () => {
           />
         ))}
         <Route path="/account" element={<AccountPage />} />
-      </Routes>
+      </HashRouter>
     </div>
   );
 };
