@@ -4,7 +4,7 @@ import '../css/RecipePage.css';
 import Header from '../scripts/Header';
 import Footer from '../scripts/Footer';
 
-const RecipePage = ({ name, date, servings, directions, ingredients, image }) => {
+const RecipePage = ({ id, name, date, servings, directions, ingredients, image }) => {
     return (
         <main className="recipe-page">
             <Header />
@@ -19,8 +19,8 @@ const RecipePage = ({ name, date, servings, directions, ingredients, image }) =>
                         <p><strong>Servings:</strong>{servings}</p>
                         <p><strong>Ingredients:</strong></p>
                         <ul className="ingredients-list">
-                            {ingredients.map((ingredient, index) => (
-                                <li key={index}>{ingredient}</li>
+                            {ingredients.map((ingredient, id) => (
+                                <li key={id}>{ingredient}</li>
                             ))}
                         </ul>
                         <p><strong>Directions:</strong></p>
@@ -28,7 +28,7 @@ const RecipePage = ({ name, date, servings, directions, ingredients, image }) =>
                     </section>
                 </div>
                 <div className="recipe-image">
-                    <img src={image} alt={`Image of ${name}`} />
+                    <img src={image} alt={`${name}`} />
                 </div>
             </div>
             <Footer />
@@ -38,6 +38,7 @@ const RecipePage = ({ name, date, servings, directions, ingredients, image }) =>
 
 // Define PropTypes to ensure proper data is passed
 RecipePage.propTypes = {
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     servings: PropTypes.number.isRequired,

@@ -21,7 +21,7 @@ const PreviewItem = ({ id, image, name, servings }) => {
 
 // Use PropTypes for type-checking
 PreviewItem.propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     servings: PropTypes.number.isRequired

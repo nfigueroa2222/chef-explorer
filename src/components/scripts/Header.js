@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import '../css/Header.css';
 
 const Header = () => {
-    //Create two states, one for the screen size and the other for the menu status
+    // Create two states, one for the screen size and the other for the menu status
     const [isMobile, setIsMobile] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    // Create a state for the user name to show up in the header
+    const [userHeader, setUser] = useState(null);
 
     // Updates the screen size state
     const checkScreenSize = () => {
@@ -19,6 +21,13 @@ const Header = () => {
         checkScreenSize(); // Initial check
         window.addEventListener('resize', checkScreenSize); // Update on resize event
     }, []); //[] means no dependencies and only on initial render
+
+    useEffect(() => {
+        const storedUser = localStorage.getItem('user');
+        if (storedUser) {
+            setUser(JSON.parse(storedUser)); // Set the user state from localStorage
+        }
+    }, []);
 
     // Toggle the mobile menu
     const toggleMenu = () => {
@@ -47,15 +56,26 @@ const Header = () => {
                                 <ul className={`nav-links-small ${menuOpen ? 'active' : ''}`}> {/* Only apply active style if menu is open */}
                                     <li><Link to="/">Home</Link></li>
                                     <li><Link to="/recipes">All Recipes</Link></li>
+                                    <li><Link to="/account">Account</Link></li>
                                 </ul>
                             </div>
                          ) : (
                             <ul className={`nav-links-large ${menuOpen ? 'active' : ''}`}>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/recipes">All Recipes</Link></li>
+                            <li><Link to="/account">Account</Link></li>
                         </ul>
                         )}
                     </nav>
+                    {userHeader ? (
+                        <div className="user-info">
+                            <p>Welcome, {userHeader.first_name}!</p>
+                        </div>
+                    ) : (
+                        <div className="user-info">
+                            <p>Please log in</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </header>
