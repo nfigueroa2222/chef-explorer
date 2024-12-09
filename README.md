@@ -2,7 +2,7 @@
 
 ## Structure of chef-explorer
 
-Root
+### Root
     server.js
         - Uses express to host the backend and connect routes to the MySQL database
         - Uses cors as middleware to allow the frontend to use backend routes
