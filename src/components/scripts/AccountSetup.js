@@ -199,69 +199,71 @@ const AccountSetup = () => {
     };
 
     return (
-        <section className='account-setup'>
-            <h1>Account Setup</h1>
-            <form>
-                <section>
-                    <label>Email:</label>
-                    <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                    />
-                    {errors.email && <span>{errors.email}</span>}
-                </section>
-                <section>
-                    <label>Password:</label>
-                    <input
-                        type="password"
-                        name="password"
-                        value={formData.password}
-                        onChange={handleChange}
-                    />
-                    {errors.password && <span>{errors.password}</span>}
-                </section>
-                <section>
-                    <label>First Name:</label>
-                    <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                    />
-                    {errors.firstName && <span>{errors.firstName}</span>}
-                </section>
-                <section>
-                    <label>Last Name:</label>
-                    <input
-                        type="text"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                    />
-                    {errors.lastName && <span>{errors.lastName}</span>}
-                </section>
-                <div className="button-container">
-                    <button type="button" onClick={handleRegister}>
-                        Register
-                    </button>
-                    {!user ? (
-                        <button onClick={handleLogin}>Login</button>
-                    ) : (
-                        <button onClick={handleLogout}>Logout</button>
-                    )}
-                </div>
-            </form>
-            {isPopupVisible && (
-                <div className="popup">
-                    <div className="popup-content">
-                        <p>{popupMessage}</p>
-                        <button onClick={closePopup}>Close</button>
+        <main className='account-container'>
+            <section className='account-setup'>
+                <h1>Account Setup</h1>
+                <form>
+                    <section>
+                        <label>Email:</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
+                        {errors.email && <span>{errors.email}</span>}
+                    </section>
+                    <section>
+                        <label>Password:</label>
+                        <input
+                            type="password"
+                            name="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                        />
+                        {errors.password && <span>{errors.password}</span>}
+                    </section>
+                    <section>
+                        <label>First Name:</label>
+                        <input
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
+                        />
+                        {errors.firstName && <span>{errors.firstName}</span>}
+                    </section>
+                    <section>
+                        <label>Last Name:</label>
+                        <input
+                            type="text"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
+                        />
+                        {errors.lastName && <span>{errors.lastName}</span>}
+                    </section>
+                    <div className="button-container">
+                        <button type="button" onClick={handleRegister}>
+                            Register
+                        </button>
+                        {!user ? (
+                            <button onClick={handleLogin}>Login</button>
+                        ) : (
+                            <button onClick={handleLogout}>Logout</button>
+                        )}
                     </div>
-                </div>
-            )}
-        </section>
+                </form>
+                {isPopupVisible && (
+                    <div className="popup">
+                        <div className="popup-content">
+                            <p>{popupMessage}</p>
+                            <button onClick={closePopup}>Close</button>
+                        </div>
+                    </div>
+                )}
+            </section>
+        </main>
     );
 };
 

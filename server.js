@@ -106,29 +106,29 @@ app.post('/logout', (req, res) => {
   });
 });
 
-// Save recipe endpoint 
-app.post('/save-recipe', (req, res) => {
-  const { userEmail, recipeName, ingredients, directions } = req.body;
+// // Save recipe endpoint 
+// app.post('/save-recipe', (req, res) => {
+//   const { userEmail, recipeName, ingredients, directions } = req.body;
 
-  if (!userEmail || !recipeName || !ingredients || !directions) {
-    return res.status(400).json({ error: 'All fields are required.' });
-  }
+//   if (!userEmail || !recipeName || !ingredients || !directions) {
+//     return res.status(400).json({ error: 'All fields are required.' });
+//   }
 
-  // Save the recipe in the recipes table
-  const query = `
-      INSERT INTO recipes (user_email, recipe_name, ingredients, directions)
-      VALUES (?, ?, ?, ?)
-  `;
-  const values = [userEmail, recipeName, JSON.stringify(ingredients), directions];
+//   // Save the recipe in the recipes table
+//   const query = `
+//       INSERT INTO recipes (user_email, recipe_name, ingredients, directions)
+//       VALUES (?, ?, ?, ?)
+//   `;
+//   const values = [userEmail, recipeName, JSON.stringify(ingredients), directions];
 
-  db.query(query, values, (err, result) => {
-    if (err) {
-      console.error('Error saving recipe:', err);
-      return res.status(500).json({ error: 'Failed to save the recipe.' });
-    }
-    res.status(201).json({ message: 'Recipe saved successfully.', recipeId: result.insertId });
-  });
-});
+//   db.query(query, values, (err, result) => {
+//     if (err) {
+//       console.error('Error saving recipe:', err);
+//       return res.status(500).json({ error: 'Failed to save the recipe.' });
+//     }
+//     res.status(201).json({ message: 'Recipe saved successfully.', recipeId: result.insertId });
+//   });
+// });
 
 // Start the Express server
 const PORT = 3001;
