@@ -125,3 +125,6 @@ sudo service mysql status (confirm that mySQL is running)
 - npm run deploy -> Launches the script, to push to the gh-pages deployment branch
 - Use HashRouter instead of BrowserRouter since BrowserRouter is not supported 
 - The deployment script does not load images in the images folder, needs to be in same directory as index.html
+
+### Building local vs deployment
+- Change homepage in package.json to "https://nfigueroa2222.github.io/chef-explorer/" instead of "." for local builds
