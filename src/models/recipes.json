@@ -168,5 +168,26 @@
             "3 small Potatoes",
             "Oyster Mushrooms"
         ]
+    },
+    {
+        "id": 11,
+        "date": "2024-13-12",
+        "image": "bison_chili.jpg",
+        "name": "Chili with Ground Bison",
+        "servings": 3,
+        "directions": "Saute peppers, onions, garlic, and chili pepper in chili oil. Then cook 1 pound of ground bison, add chili seasonings and then add to the crock pot. Add 1 can of tomato sauce, 2 cubed tomatoes, a pinch of cocoa powder, beef broth, and sugar. Then cook on low for 4 and a half hours. Add in red kidney beans at the end and let cook for 30 minutes. Then top with avocado and sour cream.",
+        "ingredients": [
+            "1 pound of ground bison",
+            "1 can of tomato sauce",
+            "1 green pepper",
+            "Half of a sweet onion",
+            "3 garlic cloves",
+            "Chili pepper (optional)",
+            "1 tsp sugar",
+            "1/2 cup of beef broth",
+            "Pinch of cocoa powder",
+            "Sour cream",
+            "1 Avacado"
+        ]
     }
 ]
